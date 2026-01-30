@@ -18,7 +18,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 Route::middleware('admin')->group(function () {
-    Route::get('/test_admin', [AdminController::class, 'test_admin'])->name('admin.test');
+    Route::get('/add_category', [AdminController::class, 'addCategory'])->name('admin.addcategory');
+    Route::post('/add_category', [AdminController::class, 'postAddCategory'])->name('admin.postaddcategory');
 });
 
 require __DIR__.'/auth.php';
