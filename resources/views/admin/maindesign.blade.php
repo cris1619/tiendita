@@ -85,11 +85,11 @@
                     <li><a href="{{route('admin.viewcategory')}}">View Category</a></li>
                   </ul>
                 </li>
-                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
+                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Products </a>
                   <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
+                    <li><a href="{{route('admin.addproduct')}}">Add Product</a></li>
+                    <li><a href="{{route('admin.viewproduct')}}">View Product</a></li>
+                    <li><a href="#">View Orders</a></li>
                   </ul>
                 </li>
                 <li><a href="login.html"> <i class="icon-logout"></i>Login page </a></li>
@@ -107,6 +107,8 @@
           @yield('add_category')  
           @yield('view_category')
           @yield('update_category')
+          @yield('add_product')
+          @yield('view_product')
         </section>
         <!-- end of main content -->
         <footer class="footer">
