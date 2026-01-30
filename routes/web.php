@@ -19,6 +19,7 @@ Route::middleware('auth')->group(function () {
 });
 Route::middleware('admin')->group(function () {
     Route::get('/add_category', [AdminController::class, 'addCategory'])->name('admin.addcategory');
+    Route::get('/view_category', [AdminController::class, 'viewCategory'])->name('admin.viewcategory');
     Route::post('/add_category', [AdminController::class, 'postAddCategory'])->name('admin.postaddcategory');
 });
 
