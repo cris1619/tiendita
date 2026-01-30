@@ -106,6 +106,7 @@
           @yield('dashboard')
           @yield('add_category')  
           @yield('view_category')
+          @yield('update_category')
         </section>
         <!-- end of main content -->
         <footer class="footer">

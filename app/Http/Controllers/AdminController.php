@@ -21,4 +21,22 @@ class AdminController extends Controller
         $categories=Category::all();
         return view('admin.viewcategory',compact('categories'));
     }
+
+    public function deleteCategory($id){
+        $category=Category::findOrFail($id);
+        $category->delete();
+        return redirect()->back()->with('delete_category','Category deleted successfully');
+    }
+
+    public function updatecategory($id){
+        $category=Category::findOrFail($id);
+        return view('admin.updatecategory',compact('category'));
+    }
+
+    public function postUpdateCategory(Request $request,$id){
+        $category=Category::findOrFail($id);
+        $category->category=$request->category;
+        $category->save();
+        return redirect()->back()->with('update_category','Category updated successfully');
+    }
 }
