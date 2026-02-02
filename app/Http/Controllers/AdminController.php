@@ -20,7 +20,7 @@ class AdminController extends Controller
     }
 
     public function viewCategory(){
-        $categories=Category::all();
+        $categories=Category::paginate(2);
         return view('admin.viewcategory',compact('categories'));
     }
 
@@ -49,7 +49,7 @@ class AdminController extends Controller
     }
 
     public function viewProduct(){
-        $products=Product::all();
+        $products=Product::paginate(1);
         return view('admin.viewproduct',compact('products'));
     }
 

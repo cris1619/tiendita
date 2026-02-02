@@ -27,6 +27,7 @@
             </td>
         </tr>
         @endforeach
+        {{ $categories->links() }}
     </tbody>
 </table>
 
